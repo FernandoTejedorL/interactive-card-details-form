@@ -43,66 +43,78 @@
               src="./assets/images/bg-card-front.png"
               alt="bg-card-front"
             />
-            <h3 class="cvv">000</h3>
+            <h3 class="cvv" id="CVC-of-card">000</h3>
           </div>
           <div class="data-of-card">
-            <h2 class="numbers-of-card text-card">0000 0000 0000 0000</h2>
+            <h2 class="numbers-of-card text-card" id="numbers-of-card">0000 0000 0000 0000</h2>
             <div class="name-and-exp-of-card text-card">
-              <h3>JANE APPLESEED</h3>
-              <h3>00/00</h3>
+              <h3 id="name-of-card">JANE APPLESEED</h3>
+              <h3><span id="month-of-card">00</span>/<span id="year-of-card">00</span></h3>
             </div>
           </div>
         </div>
-        <div class="second-card">
-          <div>
-            <h2 class="text-over-fields">CARDHOLDER NAME</h2>
-            <input
-              type="text"
-              name="e.g. Jane Appleseed"
-              id=""
-              class="text-to-fill big-text-to-fill"
-            />
-          </div>
-          <div>
-            <h2 class="text-over-fields">CARD NUMBER</h2>
-            <input
-              type="text"
-              name="e.g. Jane Appleseed"
-              id="card-number-input"
-              class="text-to-fill big-text-to-fill"
-            />
-            <label for="card-number-input"></label>
-          </div>
-          <div>
-            <div class="exp-and-cvc">
-              <h2 class="text-over-fields">EXP. DATE (MM/YY)</h2>
-              <h2 class="text-over-fields">CVC</h2>
-            </div>
-            <div class="bottom-text-to-fill">
-              <div class="month-and-year-bg">
-                <input
-                  type="text"
-                  name="MM"
-                  id="month-input"
-                  class="text-to-fill small-text-to-fill"
-                />
-                <input
-                  type="text"
-                  name="YY"
-                  id="year-input"
-                  class="text-to-fill small-text-to-fill"
-                />
-              </div>
+        <form>
+          <div class="second-card">
+            <div>
+              <h2 class="text-over-fields">CARDHOLDER NAME</h2>
               <input
                 type="text"
-                name="CVC"
-                id="cvc-input"
-                class="text-to-fill medium-text-to-fill"
+                name=""
+                id="name-input"
+                class="text-to-fill big-text-to-fill"
+                placeholder="  e.g. Jane Appleseed"
               />
+              <h6 class="cant-be-blank">Can't be blank</h6>
             </div>
+            <div>
+              <h2 class="text-over-fields">CARD NUMBER</h2>
+              <input
+                type="number"
+                name=""
+                id="card-number-input"
+                class="text-to-fill big-text-to-fill"
+                placeholder="  e.g. 1234 5678 9123 0000"
+              />
+              <h6 class="cant-be-blank">Can't be blank</h6>
+            </div>
+            <div>
+              <div class="exp-and-cvc">
+                <h2 class="text-over-fields">EXP. DATE (MM/YY)</h2>
+                <h2 class="text-over-fields">CVC</h2>
+              </div>
+              <div class="bottom-text-to-fill">
+                <div class="month-and-year-bg">
+                  <input
+                    type="number"
+                    name=""
+                    id="month-input"
+                    class="text-to-fill small-text-to-fill"
+                    placeholder="  MM"
+                  />
+                  <input
+                    type="number"
+                    name=""
+                    id="year-input"
+                    class="text-to-fill small-text-to-fill"
+                    placeholder="  YY"
+                  />
+                </div>
+                <input
+                  type="number"
+                  name=""
+                  id="cvc-input"
+                  class="text-to-fill medium-text-to-fill"
+                  placeholder="  e.g. 123"
+                />
+              </div>
+              <div class="both-cant-be-blank">
+                <h6 class="cant-be-blank">Can't be blank</h6>
+                <h6 class="cant-be-blank">Can't be blank</h6>
+              </div>
+            </div>
+            <input type="submit" class="confirm-button" value="Confirm"></input>
           </div>
-          <button class="confirm-button">Confirm</button>
-        </div>
+        </form>
       </article>
     </main>
     <script src="./js/scripts.js"></script>

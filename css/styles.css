@@ -229,7 +229,7 @@ body {
   .name-and-exp-of-card {
     font-size: 14px;
     width: 383px;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 145px;
   }
 }
@@ -312,4 +312,14 @@ body {
   .confirm-button {
     width: 381px;
   }
+}
+
+.cant-be-blank {
+  margin: 0px;
+  display: none;
+}
+
+.both-cant-be-blank {
+  display: flex;
+  gap: 110px;
 }
