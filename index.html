@@ -3,10 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
   <body>
+    <main>
+      <div class="first-card">
+        <div>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/bg-main-desktop.png"
+            />
+            <source
+              media="(360px)"
+              srcset="./assets/images/bg-main-mobile.png"
+            />
+            <img
+              src="./assets/images/bg-main-mobile.png"
+              alt="bg-main-mobile"
+            />
+          </picture>
+        </div>
+        <img
+          class="back-of-card"
+          src="./assets/images/bg-card-back.png"
+          alt="bg-card-back"
+        />
+        <img
+          class="front-of-card"
+          src="./assets/images/bg-card-front.png"
+          alt="bg-card-front"
+        />
+        <div class="data-of-card">
+          <h2 class="numbers-of-card text-card">0000 0000 0000 0000</h2>
+          <div>
+            <h>JANE APPLESEED</h>
+            <h3>00/00</h3>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h2>Cardholder Name</h2>
+          <input type="text" name="e.g. Jane Appleseed" id="" />
+        </div>
+        <div>
+          <h2>Card Number</h2>
+          <input
+            type="text"
+            name="e.g. Jane Appleseed"
+            id="card-number-input"
+          />
+          <label for="card-number-input"></label>
+        </div>
+        <div>
+          <div>
+            <h2>Exp. Date (MM/YY)</h2>
+            <h2>CVC</h2>
+          </div>
+          <div>
+            <input type="text" name="MM" id="month-input" />
+            <input type="text" name="YY" id="year-input" />
+          </div>
+          <input type="text" name="CVC" id="cvc-input" />
+        </div>
+        <button>Confirm</button>
+      </div>
+    </main>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

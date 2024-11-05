@@ -29,5 +29,69 @@ ul {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.first-card {
+  position: relative;
+  height: 240px;
+  width: 375px;
+  margin-bottom: 91px;
+}
+
+.back-of-card {
+  position: absolute;
+  height: 157px;
+  width: 286px;
+  top: 32px;
+  left: 73px;
+}
+
+.front-of-card {
+  position: absolute;
+  height: 157px;
+  width: 286px;
+  top: 126px;
+  left: 16px;
+}
+
+.data-of-card {
+  position: absolute;
+  top: 211px;
+  left: 36px;
+  height: 156px;
+  width: 285px;
+  margin: 0;
+}
+
+.data-of-card::before {
+  content: "";
+  position: absolute;
+  top: -68px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.data-of-card::after {
+  content: "";
+  position: absolute;
+  top: -62px;
+  left: 40px;
+  height: 14px;
+  width: 14px;
+  background-color: #6348fe00;
+  border: solid 2px white;
+  border-radius: 50%;
+}
+
+.text-card {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500px;
+}
+
+.numbers-of-card {
+  font-size: 18px;
 }
