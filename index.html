@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-        <form>
+        <form id="form">
           <div class="second-card">
             <div>
               <h2 class="text-over-fields">CARDHOLDER NAME</h2>
@@ -64,7 +64,7 @@
                 class="text-to-fill big-text-to-fill"
                 placeholder="  e.g. Jane Appleseed"
               />
-              <h6 class="cant-be-blank">Can't be blank</h6>
+              <h6 id="nameCBB" class="cant-be-blank">Can't be blank</h6>
             </div>
             <div>
               <h2 class="text-over-fields">CARD NUMBER</h2>
@@ -75,7 +75,7 @@
                 class="text-to-fill big-text-to-fill"
                 placeholder="  e.g. 1234 5678 9123 0000"
               />
-              <h6 class="cant-be-blank">Can't be blank</h6>
+              <h6 id="numberCBB"  class="cant-be-blank">Can't be blank</h6>
             </div>
             <div>
               <div class="exp-and-cvc">
@@ -108,8 +108,8 @@
                 />
               </div>
               <div class="both-cant-be-blank">
-                <h6 class="cant-be-blank">Can't be blank</h6>
-                <h6 class="cant-be-blank">Can't be blank</h6>
+                <h6 id="dateCBB"  class="cant-be-blank">Can't be blank</h6>
+                <h6 id="cvcCBB"  class="cant-be-blank">Can't be blank</h6>
               </div>
             </div>
             <input type="submit" class="confirm-button" value="Confirm"></input>

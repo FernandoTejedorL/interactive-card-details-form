@@ -230,7 +230,6 @@ body {
     font-size: 14px;
     width: 383px;
     justify-content: space-between;
-    gap: 145px;
   }
 }
 
@@ -314,12 +313,17 @@ body {
   }
 }
 
-.cant-be-blank {
-  margin: 0px;
-  display: none;
-}
-
 .both-cant-be-blank {
   display: flex;
   gap: 110px;
+}
+
+.cant-be-blank {
+  margin: 0px;
+  opacity: 0%;
+}
+
+.it-is-blank {
+  margin: 0;
+  color: red;
 }

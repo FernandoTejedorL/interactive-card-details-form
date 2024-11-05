@@ -9,55 +9,79 @@ const cardnumberinputElement = document.getElementById('card-number-input');
 const monthinputElement = document.getElementById('month-input');
 const yearinputElement = document.getElementById('year-input');
 const cvcinputElement = document.getElementById('cvc-input');
+const formElement = document.getElementById('form');
+const cbbnameElement = document.getElementById('nameCBB');
+const cbbnumberElement = document.getElementById('numberCBB');
+const cbbdateElement = document.getElementById('dateCBB');
+const cbbcvvElement = document.getElementById('cvcCBB');
 
-//reflejar en la tarjeta lo que se va introduciendo en formulario
-
-// Nombre
-const writeNameData = event => {
-    if (nameinputElement.value === '') {
-        nameofcardElement.textContent = 'JANE APPLESEED';
-    } else {
-        nameofcardElement.textContent = nameinputElement.value.toUpperCase();
-    }
-}
+const writeNameData = (event) => {
+  if (nameinputElement.value === '') {
+    nameofcardElement.textContent = 'JANE APPLESEED';
+  } else {
+    nameofcardElement.textContent = nameinputElement.value.toUpperCase();
+  }
+};
 nameinputElement.addEventListener('keyup', writeNameData);
 
-// Número de tarjeta
-const writeNumbersData = event => {
-    if (cardnumberinputElement.value === '') {
-        numbersofcardElement.textContent = '0000 0000 0000 0000';
-    } else {
-        numbersofcardElement.textContent = cardnumberinputElement.value.toUpperCase();
-    }
-}
+const writeNumbersData = (event) => {
+  if (cardnumberinputElement.value === '') {
+    numbersofcardElement.textContent = '0000 0000 0000 0000';
+  } else {
+    numbersofcardElement.textContent =
+      cardnumberinputElement.value.toUpperCase();
+  }
+};
 cardnumberinputElement.addEventListener('keyup', writeNumbersData);
 
-//Mes
-const writeMonthData = event => {
-    if (monthinputElement.value === '') {
-        monthofcardElement.textContent = '00';
-    } else {
-        monthofcardElement.textContent = monthinputElement.value;
-    }
-}
+const writeMonthData = (event) => {
+  if (monthinputElement.value === '') {
+    monthofcardElement.textContent = '00';
+  } else {
+    monthofcardElement.textContent = monthinputElement.value;
+  }
+};
 monthinputElement.addEventListener('keyup', writeMonthData);
 
-//Año
-const writeYearData = event => {
-    if (yearinputElement.value === '') {
-        yearofcardElement.textContent = '00';
-    } else {
-        yearofcardElement.textContent = yearinputElement.value;
-    }
-}
+const writeYearData = (event) => {
+  if (yearinputElement.value === '') {
+    yearofcardElement.textContent = '00';
+  } else {
+    yearofcardElement.textContent = yearinputElement.value;
+  }
+};
 yearinputElement.addEventListener('keyup', writeYearData);
 
-//CVC
-const writeCVCData = event => {
-    if (cvcinputElement.value === '') {
-        cvcofcardElment.textContent = '000';
-    } else {
-        cvcofcardElment.textContent = cvcinputElement.value;
-    }
-}
+const writeCVCData = (event) => {
+  if (cvcinputElement.value === '') {
+    cvcofcardElment.textContent = '000';
+  } else {
+    cvcofcardElment.textContent = cvcinputElement.value;
+  }
+};
 cvcinputElement.addEventListener('keyup', writeCVCData);
+
+const validateField = (event) => {
+  event.preventDefault();
+  if (nameinputElement.value === '') {
+    cbbnameElement.classList.replace('cant-be-blank', 'it-is-blank');
+  } else {
+    cbbnameElement.classList.replace('it-is-blank', 'cant-be-blank');
+  }
+  if (cardnumberinputElement.value === '') {
+    cbbnumberElement.classList.replace('cant-be-blank', 'it-is-blank');
+  } else {
+    cbbnumberElement.classList.replace('it-is-blank', 'cant-be-blank');
+  }
+  if (monthinputElement.value === '' || yearinputElement.value === '') {
+    cbbdateElement.classList.replace('cant-be-blank', 'it-is-blank');
+  } else {
+    cbbdateElement.classList.replace('it-is-blank', 'cant-be-blank');
+  }
+  if (cvcinputElement.value === '') {
+    cbbcvvElement.classList.replace('cant-be-blank', 'it-is-blank');
+  } else {
+    cbbcvvElement.classList.replace('it-is-blank', 'cant-be-blank');
+  }
+};
+form.addEventListener('submit', validateField);
