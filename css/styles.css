@@ -30,6 +30,32 @@ ul {
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
+  font-weight: 300px;
+}
+
+@media screen and (width>768px) {
+  .dsktop-bg {
+    height: 900px;
+    width: 483px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.both-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (width>768px) {
+  .both-cards {
+    flex-direction: row;
+    align-items: center;
+    gap: 327px;
+    margin-top: 187px;
+    height: 541px;
+  }
 }
 
 .first-card {
@@ -37,6 +63,29 @@ body {
   height: 240px;
   width: 375px;
   margin-bottom: 91px;
+}
+
+@media screen and (width>768px) {
+  .first-card {
+    height: 527px;
+    width: 541px;
+  }
+}
+
+.second-card {
+  height: 328px;
+  width: 327px;
+  margin-left: 24px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@media screen and (width>768px) {
+  .second-card {
+    position: relative;
+    height: 352px;
+    width: 381px;
+  }
 }
 
 .back-of-card {
@@ -47,12 +96,48 @@ body {
   left: 73px;
 }
 
+@media screen and (width>768px) {
+  .back-of-card {
+    top: 365px;
+    left: 258px;
+    height: 245px;
+    width: 447px;
+  }
+}
+
+.cvv {
+  position: absolute;
+  top: 93px;
+  left: 301px;
+  color: white;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (width>768px) {
+  .cvv {
+    font-size: 14px;
+    letter-spacing: 2px;
+    top: 463px;
+    left: 600px;
+  }
+}
+
 .front-of-card {
   position: absolute;
   height: 157px;
   width: 286px;
   top: 126px;
   left: 16px;
+}
+
+@media screen and (width>768px) {
+  .front-of-card {
+    top: 80px;
+    left: 164px;
+    height: 245px;
+    width: 447px;
+  }
 }
 
 .data-of-card {
@@ -64,6 +149,12 @@ body {
   margin: 0;
 }
 
+@media screen and (width>768px) {
+  .data-of-card {
+    left: 200px;
+  }
+}
+
 .data-of-card::before {
   content: "";
   position: absolute;
@@ -72,6 +163,14 @@ body {
   width: 30px;
   background-color: white;
   border-radius: 50%;
+}
+
+@media screen and (width>768px) {
+  .data-of-card::before {
+    height: 47px;
+    width: 47px;
+    top: -100px;
+  }
 }
 
 .data-of-card::after {
@@ -86,12 +185,131 @@ body {
   border-radius: 50%;
 }
 
+@media screen and (width>768px) {
+  .data-of-card::after {
+    height: 21px;
+    width: 21px;
+    top: -86px;
+    left: 60px;
+  }
+}
+
 .text-card {
   color: white;
   letter-spacing: 2px;
-  font-weight: 500px;
+  font-weight: 300px;
+  width: 245px;
+}
+
+@media screen and (width>768px) {
+  .text-card {
+    width: 383px;
+  }
 }
 
 .numbers-of-card {
   font-size: 18px;
+  margin: 0;
+}
+
+@media screen and (width>768px) {
+  .numbers-of-card {
+    font-size: 28px;
+  }
+}
+
+.name-and-exp-of-card {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  margin-top: 8px;
+}
+
+@media screen and (width>768px) {
+  .name-and-exp-of-card {
+    font-size: 14px;
+    width: 383px;
+    justify-content: flex-start;
+    gap: 145px;
+  }
+}
+
+.text-over-fields {
+  margin: 20px 0 9px;
+  font-size: 12px;
+}
+
+.exp-and-cvc {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (width>768px) {
+  .exp-and-cvc {
+    gap: 48px;
+  }
+}
+
+.text-to-fill {
+  border: solid 1px #dfdee0;
+  border-radius: 8px;
+  height: 45px;
+}
+
+.big-text-to-fill {
+  width: 327px;
+}
+
+@media screen and (width>768px) {
+  .big-text-to-fill {
+    width: 381px;
+  }
+}
+
+.bottom-text-to-fill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.medium-text-to-fill {
+  width: 164px;
+}
+
+@media screen and (width>768px) {
+  .medium-text-to-fill {
+    width: 191px;
+  }
+}
+
+.small-text-to-fill {
+  width: 72px;
+}
+
+@media screen and (width>768px) {
+  .small-text-to-fill {
+    width: 80px;
+  }
+  .month-and-year-bg {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.confirm-button {
+  color: white;
+  background-color: #21092f;
+  height: 53px;
+  width: 327px;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin-top: 28px;
+}
+
+@media screen and (width>768px) {
+  .confirm-button {
+    width: 381px;
+  }
 }

@@ -6,76 +6,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="to-center">
     <main>
-      <div class="first-card">
-        <div>
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="./assets/images/bg-main-desktop.png"
-            />
-            <source
-              media="(360px)"
-              srcset="./assets/images/bg-main-mobile.png"
+      <article class="both-cards">
+        <div class="first-card">
+          <div class="dsktop-bg">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./assets/images/bg-main-desktop.png"
+              />
+              <source
+                media="(360px)"
+                srcset="./assets/images/bg-main-mobile.png"
+              />
+              <img
+                src="./assets/images/bg-main-mobile.png"
+                alt="bg-main-mobile"
+              />
+            </picture>
+          </div>
+          <div>
+            <img
+              class="back-of-card"
+              src="./assets/images/bg-card-back.png"
+              alt="bg-card-back"
             />
             <img
-              src="./assets/images/bg-main-mobile.png"
-              alt="bg-main-mobile"
+              class="front-of-card"
+              src="./assets/images/bg-card-front.png"
+              alt="bg-card-front"
             />
-          </picture>
-        </div>
-        <img
-          class="back-of-card"
-          src="./assets/images/bg-card-back.png"
-          alt="bg-card-back"
-        />
-        <img
-          class="front-of-card"
-          src="./assets/images/bg-card-front.png"
-          alt="bg-card-front"
-        />
-        <div class="data-of-card">
-          <h2 class="numbers-of-card text-card">0000 0000 0000 0000</h2>
-          <div>
-            <h>JANE APPLESEED</h>
-            <h3>00/00</h3>
+            <h3 class="cvv">000</h3>
+          </div>
+          <div class="data-of-card">
+            <h2 class="numbers-of-card text-card">0000 0000 0000 0000</h2>
+            <div class="name-and-exp-of-card text-card">
+              <h3>JANE APPLESEED</h3>
+              <h3>00/00</h3>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <div>
-          <h2>Cardholder Name</h2>
-          <input type="text" name="e.g. Jane Appleseed" id="" />
-        </div>
-        <div>
-          <h2>Card Number</h2>
-          <input
-            type="text"
-            name="e.g. Jane Appleseed"
-            id="card-number-input"
-          />
-          <label for="card-number-input"></label>
-        </div>
-        <div>
+        <div class="second-card">
           <div>
-            <h2>Exp. Date (MM/YY)</h2>
-            <h2>CVC</h2>
+            <h2 class="text-over-fields">CARDHOLDER NAME</h2>
+            <input
+              type="text"
+              name="e.g. Jane Appleseed"
+              id=""
+              class="text-to-fill big-text-to-fill"
+            />
           </div>
           <div>
-            <input type="text" name="MM" id="month-input" />
-            <input type="text" name="YY" id="year-input" />
+            <h2 class="text-over-fields">CARD NUMBER</h2>
+            <input
+              type="text"
+              name="e.g. Jane Appleseed"
+              id="card-number-input"
+              class="text-to-fill big-text-to-fill"
+            />
+            <label for="card-number-input"></label>
           </div>
-          <input type="text" name="CVC" id="cvc-input" />
+          <div>
+            <div class="exp-and-cvc">
+              <h2 class="text-over-fields">EXP. DATE (MM/YY)</h2>
+              <h2 class="text-over-fields">CVC</h2>
+            </div>
+            <div class="bottom-text-to-fill">
+              <div class="month-and-year-bg">
+                <input
+                  type="text"
+                  name="MM"
+                  id="month-input"
+                  class="text-to-fill small-text-to-fill"
+                />
+                <input
+                  type="text"
+                  name="YY"
+                  id="year-input"
+                  class="text-to-fill small-text-to-fill"
+                />
+              </div>
+              <input
+                type="text"
+                name="CVC"
+                id="cvc-input"
+                class="text-to-fill medium-text-to-fill"
+              />
+            </div>
+          </div>
+          <button class="confirm-button">Confirm</button>
         </div>
-        <button>Confirm</button>
-      </div>
+      </article>
     </main>
     <script src="./js/scripts.js"></script>
   </body>
