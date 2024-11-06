@@ -255,6 +255,12 @@ body {
   height: 45px;
 }
 
+@media screen and (width>768px) {
+  .text-to-fill:hover {
+    border: solid 1px red;
+  }
+}
+
 .big-text-to-fill {
   width: 327px;
 }
