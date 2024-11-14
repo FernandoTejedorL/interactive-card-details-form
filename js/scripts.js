@@ -23,7 +23,8 @@ const writeNameData = (event) => {
   }
 };
 nameinputElement.addEventListener('keyup', writeNameData);
-
+//se puede sustituir 'keyup' por 'input'
+//también podemos jugar con los booleanos true or false sustituyendo toda la función
 const writeNumbersData = (event) => {
   if (cardnumberinputElement.value === '') {
     numbersofcardElement.textContent = '0000 0000 0000 0000';
@@ -33,7 +34,7 @@ const writeNumbersData = (event) => {
   }
 };
 cardnumberinputElement.addEventListener('keyup', writeNumbersData);
-
+//se puede sustituir 'keyup' por 'input'
 const writeMonthData = (event) => {
   if (monthinputElement.value === '') {
     monthofcardElement.textContent = '00';
@@ -42,7 +43,7 @@ const writeMonthData = (event) => {
   }
 };
 monthinputElement.addEventListener('keyup', writeMonthData);
-
+//se puede sustituir 'keyup' por 'input'
 const writeYearData = (event) => {
   if (yearinputElement.value === '') {
     yearofcardElement.textContent = '00';
@@ -51,7 +52,7 @@ const writeYearData = (event) => {
   }
 };
 yearinputElement.addEventListener('keyup', writeYearData);
-
+//se puede sustituir 'keyup' por 'input'
 const writeCVCData = (event) => {
   if (cvcinputElement.value === '') {
     cvcofcardElment.textContent = '000';
@@ -60,6 +61,7 @@ const writeCVCData = (event) => {
   }
 };
 cvcinputElement.addEventListener('keyup', writeCVCData);
+//se puede sustituir 'keyup' por 'input'
 
 const validateField = (event) => {
   event.preventDefault();
